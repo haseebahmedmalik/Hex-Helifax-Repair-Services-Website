@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Hex Helifax</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+
+        main {
+            font-family: "Arial Rounded MT";
+            font-weight: bold;
+        }
+
+        header {
+            height: 100px;
+            width: 100%;
+            background: #4056A1;
+            display: flex;
+            position: fixed;
+        }
+
+        .left-header {
+            height: 100%;
+            width: 25%;
+            /* background: red; */
+            padding: 14px 20px;
+            box-sizing: border-box;
+            align-items: center;
+        }
+
+        .left-header img {
+            width: 170px;
+        }
+
+        .right-header {
+            height: 100%;
+            width: 75%;
+            /* background: green; */
+        }
+
+        .right-header ul {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: right;
+            padding: 20px 40px;
+            box-sizing: border-box;
+        }
+
+        .menu {
+            text-decoration: none;
+            color: white;
+            padding: 20px;
+            font-size: 18px;
+            font-weight: Bold;
+            text-transform: capitalize;
+            text-align: right;
+        }
+
+        .home {
+            height: 634px;
+            width: 100%;
+            /* background: blanchedalmond; */
+            background-image: url(Hex-Images/Hex-Images/5.png);
+            background-size: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            box-sizing: border-box;
+            padding: 138px 52px 48px;
+        }
+
+        .home-overlay {
+            width: 100%;
+            height: 100%;
+            background: rgb(109 125 176 / 55%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 46px;
+            text-transform: capitalize;
+        }
+
+        .about {
+            height: 100px;
+            width: 100%;
+            background: white;
+            font-size: 46px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: capitalize;
+            color: #4058A2;
+
+        }
+
+        .about-details {
+            height: 348px;
+            width: 100%;
+            background: white;
+            box-sizing: border-box;
+            padding: 0 92px 0;
+        }
+
+        .about-overlay {
+            width: 100%;
+            height: 100%;
+            background: white;
+            display: flex;
+            box-sizing: border-box;
+            border: 4px solid #4056A1;
+        }
+
+        .left-content {
+
+            width: 70%;
+            background: white;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .left-content p {
+            font-size: 22px;
+            line-height: 1.6;
+            max-width: 572px;
+        }
+
+        .right-content {
+            height: 100%;
+            width: 30%;
+            background: aqua;
+        }
+
+        .right-content-img {
+            height: 100%;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .services {
+            height: 100px;
+            width: 100%;
+            background: white;
+            font-size: 46px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: capitalize;
+            color: #4058A2;
+
+        }
+
+        .services-detail {
+            height: 230px;
+            width: 100%;
+            background: #4056A1;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 40px 0;
+            box-sizing: border-box;
+        }
+
+        .services-box {
+            width: 25%;
+            height: 100%;
+            background: #4056A1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .services-box .img-1 {
+            width: 80px;
+        }
+
+        .services-box .img-2 {
+            width: 120px;
+            margin-top: 8px;
+        }
+
+        .services-box .img-3 {
+            width: 120px;
+            margin-top: 38px;
+        }
+
+        .services-box .img-4 {
+            width: 65px;
+            margin-top: 2%;
+        }
+
+
+        .services-box h3 {
+            color: white;
+            font-size: 22px;
+            text-transform: capitalize;
+            font-weight: 600;
+        }
+
+        .contact {
+            height: 100px;
+            width: 100%;
+            background: white;
+            font-size: 46px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: capitalize;
+            color: #4058A2;
+
+        }
+
+        .contact-form {
+            height: 780px;
+            width: 100%;
+            background-image: url(Hex-Images/Hex-Images/6.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: center;
+            box-sizing: border-box;
+            padding: 70px 77px;
+        }
+
+        .contact-form-overlay {
+            width: 100%;
+            height: 100%;
+            background: rgb(143 156 198 / 46%);
+            color: white;
+            font-size: 46px;
+            text-transform: capitalize;
+            box-sizing: border-box;
+            padding: 78px 30px;
+
+        }
+
+        .form {
+            padding: 60px;
+        }
+
+        .form-row {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .form-row label {
+            width: 120px;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            vertical-align: middle;
+        }
+
+        .form-row input {
+            width: 454px;
+            height: 35px;
+            border: 2px solid white;
+            background: transparent;
+            color: white;
+            margin-bottom: 16px;
+        }
+
+        .form-row textarea {
+            width: 594px;
+            height: 250px;
+            border: 2px solid white;
+            background: transparent;
+            color: white;
+        }
+
+        .form-row button {
+            margin-left: 170px;
+            width: 120px;
+            height: 40px;
+            background: white;
+            color: #4257A5;
+            border: none;
+            font-size: 24px;
+        }
+
+        footer {
+            height: 125px;
+            width: 100%;
+            background: #4056A1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+        }
+
+        @media (max-width: 600px) {
+
+            header {
+                height: auto;
+                flex-direction: column;
+                position: static;
+                padding: 15px 0;
+            }
+
+            .left-header {
+                width: 100%;
+                height: auto;
+            }
+
+            .right-header {
+                width: 100%;
+                height: auto;
+            }
+
+            .left-header {
+                padding: 10px;
+                text-align: center;
+            }
+
+            .right-header ul {
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                padding: 10px;
+            }
+
+            .menu {
+                display: block;
+                padding: 10px;
+                font-size: 18px;
+            }
+
+            .home {
+                height: auto;
+                padding: 30px 40px;
+                background-size: cover;
+            }
+
+            .home-overlay {
+                padding: 40px 10px;
+                text-align: center;
+                font-size: 24px;
+            }
+
+            .home-overlay h1 {
+                font-size: 34px;
+            }
+
+            .home-overlay p {
+                font-size: 18px;
+            }
+
+            .about {
+                font-size: 32px;
+                height: 80px;
+            }
+
+            .about-details {
+                height: auto;
+                padding: 20px;
+            }
+
+            .about-overlay {
+                flex-direction: column;
+            }
+
+            .left-content {
+                width: 100%;
+            }
+
+            .right-content {
+                width: 100%;
+            }
+
+            .left-content p {
+                font-size: 18px;
+            }
+
+            .right-content img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+
+            .services {
+                font-size: 32px;
+                height: 80px;
+            }
+
+            .services-detail {
+                height: auto;
+                flex-direction: column;
+                gap: 30px;
+                padding: 30px 0;
+            }
+
+            .services-box {
+                width: 100%;
+            }
+
+            .contact {
+                font-size: 32px;
+                height: 80px;
+            }
+
+            .contact-form {
+                height: auto;
+                background-size: cover;
+                background-position: right;
+                background-repeat: no-repeat;
+                padding: 20px 30px;
+                box-sizing: border-box;
+
+            }
+
+            .contact-form-overlay {
+                padding: 10px 6px;
+                box-sizing: border-box;
+                margin-bottom: 4px;
+            }
+
+            .form-row {
+                flex-direction: column;
+                margin-bottom: 4px;
+            }
+
+            .form-row label {
+                width: 100%;
+                margin-bottom: 8px;
+                font-size: 14px;
+            }
+
+            .form-row input {
+                width: 78%;
+                box-sizing: border-box;
+                height: 20px;
+            }
+
+            .form-row textarea {
+                width: 80%;
+                box-sizing: border-box;
+                height: 60px;
+                margin-bottom: 4px;
+            }
+
+            .form-row button {
+                margin-left: 0;
+                width: 22%;
+                height: 28px;
+                font-size: 16px;
+            }
+
+            footer {
+                height: auto;
+                padding: 20px;
+                text-align: center;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <header>
+            <div class="left-header">
+                <img src="Hex-Images/Hex-Images/logo.png">
+            </div>
+            <div class="right-header">
+                <ul>
+                    <li> <a href="#s_1" class="menu">home</a></li>
+                    <li> <a href="#s_2" class="menu">about</a></li>
+                    <li> <a href="#s_3" class="menu">services</a></li>
+                    <li> <a href="#s_4" class="menu">contact</a></li>
+                </ul>
+            </div>
+        </header>
+        <section class="home" id="s_1">
+            <div class="home-overlay">
+                <h1>hex helifax</h1>
+                <p> mobile tablet computer repairing services</p>
+            </div>
+        </section>
+        <section class="about" id="s_2">
+            <h2>about us</h2>
+        </section>
+        <section class="about-details">
+            <div class="about-overlay">
+                <div class="left-content">
+                    <p>Hex is a mobile, tablet and computer repairing service provider in helifax working for last 7
+                        years. We have made our name in the market by providing services that none other provides.</p>
+                </div>
+                <div class="right-content">
+                    <img src="Hex-Images/Hex-Images/1.png" alt="image" class="right-content-img">
+                </div>
+            </div>
+        </section>
+        <section class="services" id="s_3">
+            <h2>services</h2>
+        </section>
+        <section class="services-detail">
+            <div class="services-box">
+                <img src="Hex-Images/Hex-Images/4.png" alt="image" class="img-1">
+                <h3>mobile repairs</h3>
+            </div>
+            <div class="services-box">
+                <img src="Hex-Images/Hex-Images/2.png" alt="image" class="img-2">
+                <h3>pc/tab repairs</h3>
+            </div>
+            <div class="services-box">
+                <img src="Hex-Images/Hex-Images/3.png" alt="image" class="img-3">
+                <h3>console repairs</h3>
+            </div>
+            <div class="services-box">
+                <img src="Hex-Images/Hex-Images/7.png" alt="image" class="img-4">
+                <h3>phone sales</h3>
+            </div>
+        </section>
+        <section class="contact" id="s_4">
+            <h2>contact</h2>
+        </section>
+        <section class="contact-form">
+            <div class="contact-form-overlay">
+                <form>
+
+                    <div class="form-row">
+                        <label>Name</label>
+                        <input type="text">
+                    </div>
+
+                    <div class="form-row">
+                        <label>Contact</label>
+                        <input type="text">
+                    </div>
+
+                    <div class="form-row">
+                        <label>Email</label>
+                        <input type="email">
+                    </div>
+
+                    <div class="form-row">
+                        <label>Message</label>
+                        <textarea></textarea>
+                    </div>
+
+                    <div class="form-row">
+                        <button>Send</button>
+                    </div>
+
+                </form>
+            </div>
+        </section>
+        <footer>
+            <p> all rights reserved @Hex Technologies 2018</p>
+        </footer>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+    </main>
+</body>
+
+</html>
