@@ -1,10 +1,10 @@
-Hex Helifax – Repair Services Website
+# Hex Helifax – Repair Services Website
 
 A responsive website designed for Hex Helifax, a repair service provider specializing in mobile, tablet, computer, and gaming console repairs.
 
 The project focuses on creating a modern service-based website using HTML and CSS with a clean blue-themed interface and responsive layout.
 
-✨ Features
+## ✨ Features
 
 * Responsive design for desktop and mobile
 * Fixed navigation header on desktop
@@ -21,22 +21,24 @@ The project focuses on creating a modern service-based website using HTML and CS
 * AOS animation library integration
 * Custom background images and visual elements
 
-🛠️ Technologies Used
+## 🛠️ Technologies Used
 
 * HTML5
 * CSS3
 * AOS (Animate On Scroll)
 
-📱 Responsive Design
+## 📱 Responsive Design
 
 The website includes CSS media queries to adapt the layout for smaller screens, including mobile devices.
 
-📂 Project Structure
+## 📂 Project Structure
 
+```text
 Hex-Helifax/
 │
 ├── index.html
 ├── reset.css
+│
 └── Hex-Images/
     └── Hex-Images/
         ├── logo.png
@@ -47,11 +49,11 @@ Hex-Helifax/
         ├── 5.png
         ├── 6.png
         └── 7.png
-
-🎯 Purpose
+```
+## 🎯 Purpose
 
 This project was created to practice HTML5, CSS3, responsive web design, Flexbox, background images, overlays, forms, navigation, smooth scrolling, and section-based website layouts.
 
-👨‍💻 Author
+## 👨‍💻 Author
 
 Haseeb Ahmed Malik
